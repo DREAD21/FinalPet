@@ -22,7 +22,7 @@ namespace FinalPet.Controllers
         }
         public string City()
         {
-            string url = string.Format("https://api.freegeoip.app/json/?apikey=5e770690-a1fb-11ec-8717-e3d7c2c1dc8a");
+            string url = string.Format("https://api.freegeoip.app/);
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             try
             {
@@ -49,7 +49,7 @@ namespace FinalPet.Controllers
             {
                 name = _City;
             }
-            string url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&lang=ru&APPID=bb3ee4a24b38accc432d87fc29024dd1", name);
+            string url = string.Format("http://api.openweathermap.org/data/", name);
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             try
             {
