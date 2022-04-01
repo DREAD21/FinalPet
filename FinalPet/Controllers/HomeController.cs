@@ -22,7 +22,7 @@ namespace FinalPet.Controllers
         }
         public string City()
         {
-            string url = string.Format("https://api.freegeoip.app/");
+            string url = string.Format("https://api.freegeoip.app/api");
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             try
             {
@@ -49,7 +49,7 @@ namespace FinalPet.Controllers
             {
                 name = _City;
             }
-            string url = string.Format("http://api.openweathermap.org/data/", name);
+            string url = string.Format("http://api.openweathermap.org/data/api", name);
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             try
             {
