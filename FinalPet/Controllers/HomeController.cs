@@ -22,7 +22,7 @@ namespace FinalPet.Controllers
         }
         public string City()
         {
-            string url = string.Format("https://api.freegeoip.app/);
+            string url = string.Format("https://api.freegeoip.app/");
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             try
             {
