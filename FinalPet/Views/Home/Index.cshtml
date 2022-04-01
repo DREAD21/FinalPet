@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    @using FinalPet.Models;
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>The Big Picture - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand">Погода24</a>
+        <form class="form-inline" method="get">
+            <input class="form-control mr-sm-2" name="name" type="search" placeholder="Город" aria-label="Поиск">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+        </form>
+    </nav>
+    <!-- Page Content-->
+    <section>
+        <div class="bg-image"
+             style="background-image: url('https://androidpapers.com/web/wallpapers/wp-01025-1920x1080pix/1920x1080.jpg');
+                height: 94.2vh ">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="display-4"></h1>
+                        <p class="h4 font-weight-bold">@ViewBag.Name</p>
+                        <p class="h6 font-weight-bold">@ViewBag.Date</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <h1>
+                            <p class="font-weight-bold">@ViewBag.Temp <sup>o</sup>C</p>
+                        </h1>
+                        <p class="h6 font-weight-bold">@ViewBag.Feels_like <sup>o</sup>C</p>
+                    </div>
+                    <div class="col-4">
+                        <p class="h6 font-weight-bold">@ViewBag.Pressure</p>
+                        <p class="h6 font-weight-bold">@ViewBag.Speed</p>
+                        <p class="h6 font-weight-bold">@ViewBag.Temp_max <sup>o</sup>C </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
